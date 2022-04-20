@@ -41,4 +41,25 @@ router.post("/create", (req, res, next) => {
     });
 });
 
+router.get("/:id", (req, res) => {
+  Movie.findById(req.params.id)
+    .populate("cast")
+    .then((movie) => {
+      res.render("movies/movie-details", { movie: movie });
+    })
+    .catch((error) => {
+      res.redirect("/movies");
+    });
+});
+
+router.post("/:id/delete", (req, res) => {
+  Movie.findByIdAndRemove(req.params.id)
+    .then(() => {
+      res.redirect("/movies");
+    })
+    .catch((error) => {
+      res.redirect("/movies");
+    });
+});
+
 module.exports = router;
