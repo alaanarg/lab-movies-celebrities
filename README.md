@@ -17,7 +17,7 @@ So let's see what are some user stories related to the _celebrity_ model:
 **1. Add new celebrities**\
 **2. See the list of celebrities**
 
-In the second part of the application, when you already have a couple of celebrities in your database, let's figure out what we will do regarding _movie_ model. As we said we will have a full CRUD on this model, which means the user can:
+In the second part of the application, when you already have a couple of celebrities in your database, let's figure out what we will do regarding _movie_ model. As we said, we will have a full CRUD on this model, which means the user can:
 
 **3. Add new movies**\
 **4. See the list of all movies**\
